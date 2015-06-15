@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:floatedit="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:animateLayoutChanges="true">
+
+            <com.sunil.floatedit.FloatLabelLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_minor"
+                floatedit:floatLabelTextAppearance="@style/TextAppearance.floatedit.FloatLabel">
+
+                <EditText
+                    android:id="@+id/edit_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/account_username_hint"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:inputType="textNoSuggestions"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/edit_password" />
+
+            </com.sunil.floatedit.FloatLabelLayout>
+
+            <com.sunil.floatedit.FloatLabelLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_minor"
+                floatedit:floatLabelTextAppearance="@style/TextAppearance.floatedit.FloatLabel">
+
+                <EditText
+                    android:id="@+id/edit_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/account_password_hint"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone" />
+
+            </com.sunil.floatedit.FloatLabelLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
